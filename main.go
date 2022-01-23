@@ -29,7 +29,9 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	weatherImg = resize.Resize(40, 25, weatherImg, resize.Lanczos2)
+	if weatherImg != nil {
+		weatherImg = resize.Resize(40, 25, weatherImg, resize.Lanczos2)
+	}
 	if err != nil {
 		log.Fatal(err)
 	}
